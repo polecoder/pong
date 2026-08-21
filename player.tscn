@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b0nv0qmpemoof"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yowuo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
+size = Vector2(10, 1)
+
+[node name="Player" type="Area2D" unique_id=127505611]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=88794432]
+scale = Vector2(10, 1)
+texture = SubResource("PlaceholderTexture2D_yowuo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787550585]
+shape = SubResource("RectangleShape2D_yowuo")
