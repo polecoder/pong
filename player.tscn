@@ -1,14 +1,18 @@
 [gd_scene format=3 uid="uid://b0nv0qmpemoof"]
 
+[ext_resource type="Script" uid="uid://bdrfey3lbtfte" path="res://player.gd" id="1_4flbx"]
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_yowuo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
-size = Vector2(10, 1)
+size = Vector2(75, 5)
 
 [node name="Player" type="Area2D" unique_id=127505611]
+script = ExtResource("1_4flbx")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=88794432]
-scale = Vector2(10, 1)
+position = Vector2(1.6093254e-06, 0)
+scale = Vector2(75, 5)
 texture = SubResource("PlaceholderTexture2D_yowuo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787550585]
