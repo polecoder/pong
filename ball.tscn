@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bxevymji3t5c0"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_s20xc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
+size = Vector2(10, 10)
+
+[node name="Ball" type="Area2D" unique_id=233851302]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744051513]
+scale = Vector2(10, 10)
+texture = SubResource("CanvasTexture_s20xc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793953803]
+shape = SubResource("RectangleShape2D_yowuo")
