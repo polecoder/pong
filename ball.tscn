@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://bxevymji3t5c0"]
 
+[ext_resource type="Script" uid="uid://nap0ewk3p621" path="res://ball.gd" id="1_x8fbi"]
+
 [sub_resource type="CanvasTexture" id="CanvasTexture_s20xc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
 size = Vector2(10, 10)
 
-[node name="Ball" type="Area2D" unique_id=233851302]
+[node name="Ball" type="CharacterBody2D" unique_id=1458023439]
+script = ExtResource("1_x8fbi")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1744051513]
 scale = Vector2(10, 10)
