@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 signal hit
 
@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 	position = position.clamp(Vector2.ZERO, screen_size)
 
 
-func _on_body_entered(body: Node2D) -> void:
-	hit.emit()
-	$CollisionShape2D.set_deferred("disabled", true)
+# func _on_body_entered(body: Node2D) -> void:
+	# print("DEBUG: El siguiente objeto colisionó con el paddle: ", body)
+	# hit.emit()
+	# $CollisionShape2D.set_deferred("disabled", true)
