@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c6e4xwbst6i6x"]
 
-[ext_resource type="Script" uid="uid://bdrfey3lbtfte" path="res://paddle.gd" id="1_0sbc1"]
+[ext_resource type="Script" uid="uid://bdrfey3lbtfte" path="res://scripts/paddle.gd" id="1_3xiby"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cbx31"]
 
@@ -8,7 +8,7 @@
 size = Vector2(75, 5)
 
 [node name="Paddle" type="CharacterBody2D" unique_id=1405332351]
-script = ExtResource("1_0sbc1")
+script = ExtResource("1_3xiby")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=88794432]
 position = Vector2(1.6093254e-06, 0)
