@@ -10,20 +10,10 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 
 
-func _process(delta: float) -> void:
-	var velocity = Vector2.ZERO
+func _physics_process(delta: float) -> void:
+	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
-		velocity.x -= 1
+		velocity = Vector2.LEFT * speed
 	if Input.is_action_pressed("move_right"):
-		velocity.x += 1
-	if velocity.length() > 0:
-		velocity *= speed
-	
-	position += velocity * delta
-	position = position.clamp(Vector2.ZERO, screen_size)
-
-
-# func _on_body_entered(body: Node2D) -> void:
-	# print("DEBUG: El siguiente objeto colisionó con el paddle: ", body)
-	# hit.emit()
-	# $CollisionShape2D.set_deferred("disabled", true)
+		velocity = Vector2.RIGHT * speed
+	move_and_slide()

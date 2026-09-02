@@ -13,6 +13,4 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
-		print("DEBUG1: velocity: ", velocity)
 		velocity = velocity.bounce(collision.get_normal())
-		print("DEBUG2: velocity: ", velocity)
