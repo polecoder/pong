@@ -1,19 +1,10 @@
 extends CharacterBody2D
 
-signal hit
-
-@export var speed = 400
-var screen_size
-
-
-func _ready() -> void:
-	screen_size = get_viewport_rect().size
-
+@onready var movement_component: MovementComponent = $MovementComponent
 
 func _physics_process(delta: float) -> void:
 	velocity = Vector2.ZERO
 	if Input.is_action_pressed("move_left"):
-		velocity = Vector2.LEFT * speed
+		movement_component.handle_movement(Vector2.LEFT, delta)
 	if Input.is_action_pressed("move_right"):
-		velocity = Vector2.RIGHT * speed
-	move_and_slide()
+		movement_component.handle_movement(Vector2.RIGHT, delta)

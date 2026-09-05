@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://c6e4xwbst6i6x"]
+[gd_scene format=3 uid="uid://cf6nys14uls1"]
 
-[ext_resource type="Script" uid="uid://bdrfey3lbtfte" path="res://scripts/paddle.gd" id="1_3xiby"]
-[ext_resource type="PackedScene" uid="uid://wt7wn1r7iun8" path="res://components/movement_component.tscn" id="2_y7wee"]
+[ext_resource type="Script" uid="uid://bj3vyhtt34hi2" path="res://scripts/enemy.gd" id="1_md0e3"]
+[ext_resource type="PackedScene" uid="uid://wt7wn1r7iun8" path="res://components/movement_component.tscn" id="2_4ra3w"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_cbx31"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
 size = Vector2(75, 5)
 
-[node name="Paddle" type="CharacterBody2D" unique_id=1405332351]
-script = ExtResource("1_3xiby")
+[node name="Enemy" type="CharacterBody2D" unique_id=1405332351]
+script = ExtResource("1_md0e3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=88794432]
 position = Vector2(1.6093254e-06, 0)
@@ -19,5 +19,5 @@ texture = SubResource("CanvasTexture_cbx31")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=787550585]
 shape = SubResource("RectangleShape2D_yowuo")
 
-[node name="MovementComponent" parent="." unique_id=297569240 instance=ExtResource("2_y7wee")]
+[node name="MovementComponent" parent="." unique_id=297569240 instance=ExtResource("2_4ra3w")]
 speed = 17500

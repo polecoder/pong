@@ -8,8 +8,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yowuo"]
 size = Vector2(75, 5)
 
-[node name="Paddle" type="CharacterBody2D" unique_id=1405332351]
+[node name="Paddle" type="CharacterBody2D" unique_id=1405332351 node_paths=PackedStringArray("movement_component")]
 script = ExtResource("1_3xiby")
+movement_component = NodePath("MovementComponent")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=88794432]
 position = Vector2(1.6093254e-06, 0)
@@ -20,4 +21,3 @@ texture = SubResource("CanvasTexture_cbx31")
 shape = SubResource("RectangleShape2D_yowuo")
 
 [node name="MovementComponent" parent="." unique_id=297569240 instance=ExtResource("2_y7wee")]
-speed = 17500
