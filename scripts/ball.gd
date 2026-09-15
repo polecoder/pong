@@ -12,5 +12,8 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
-	if collision:
+	if collision && collision.is_class("CharacterBody2D"):
+		var angleVariation = (collision.get_position() - position) / collision
+		velocity = velocity.bounce(collision.get_normal())
+	elif collision:
 		velocity = velocity.bounce(collision.get_normal())

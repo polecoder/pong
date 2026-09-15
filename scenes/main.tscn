@@ -2,7 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bxevymji3t5c0" path="res://scenes/ball.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://c6e4xwbst6i6x" path="res://scenes/paddle.tscn" id="2_sugp2"]
-[ext_resource type="PackedScene" uid="uid://cf6nys14uls1" path="res://scenes/enemy.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://2ysuwwnb0d23" path="res://components/player_component.tscn" id="3_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://d3s00dejubyxq" path="res://components/enemy_component.tscn" id="3_sugp2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vi6b"]
 size = Vector2(720, 5.000021)
@@ -32,9 +33,13 @@ shape = SubResource("RectangleShape2D_0vi6b")
 [node name="Ball" parent="." unique_id=1458023439 instance=ExtResource("1_0wfyh")]
 position = Vector2(240, 116)
 
-[node name="Paddle" parent="." unique_id=1405332351 instance=ExtResource("2_sugp2")]
+[node name="Player" parent="." unique_id=1405332351 instance=ExtResource("2_sugp2")]
 position = Vector2(240, 10)
 motion_mode = 1
 
-[node name="Enemy" parent="." unique_id=288850368 instance=ExtResource("3_sugp2")]
+[node name="PlayerComponent" parent="Player" unique_id=2053634448 instance=ExtResource("3_jyhfs")]
+
+[node name="Enemy" parent="." unique_id=150058350 instance=ExtResource("2_sugp2")]
 position = Vector2(240, 710)
+
+[node name="EnemyComponent" parent="Enemy" unique_id=908632981 instance=ExtResource("3_sugp2")]
