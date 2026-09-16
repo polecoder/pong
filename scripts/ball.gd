@@ -16,5 +16,4 @@ func _physics_process(delta: float) -> void:
 		print(direction)
 		velocity = direction * speed
 	elif collision:
-		print(collision.get_collider())
 		velocity = velocity.bounce(collision.get_normal())
