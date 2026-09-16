@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 var direction
 @export var speed = 400
+@export var speed_increase = 25
 
 func _ready() -> void:
 	# velocidad inicial randomizada
@@ -14,6 +15,7 @@ func _physics_process(delta: float) -> void:
 		var paddle = collision.get_collider() as Paddle
 		direction = paddle.calculate_ball_bounce(global_position)
 		print(direction)
+		speed += speed_increase
 		velocity = direction * speed
 	elif collision:
 		velocity = velocity.bounce(collision.get_normal())
