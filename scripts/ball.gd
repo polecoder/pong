@@ -19,7 +19,8 @@ func _physics_process(delta: float) -> void:
 		velocity = direction * speed
 	elif collision:
 		velocity = velocity.bounce(collision.get_normal())
-		
+
+
 func reset(time: int) -> void:
 	# pausa para volver a empezar
 	await get_tree().create_timer(time).timeout
@@ -27,5 +28,10 @@ func reset(time: int) -> void:
 	
 	position = initial_position
 	# velocidad inicial randomizada
-	direction = Vector2.RIGHT.rotated(randf_range(0, TAU))
+	direction = generate_random_direction()
 	velocity = direction * speed
+
+func generate_random_direction() -> Vector2:
+	var x = randf_range(-0.75, 0.75)
+	var y = 1 if (randf() > 0.5) else -1
+	return Vector2(x, y)
