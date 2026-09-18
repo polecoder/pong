@@ -34,4 +34,4 @@ func reset(time: int) -> void:
 func generate_random_direction() -> Vector2:
 	var x = randf_range(-0.75, 0.75)
 	var y = 1 if (randf() > 0.5) else -1
-	return Vector2(x, y)
+	return Vector2(x, y).normalized()
