@@ -31,6 +31,7 @@ func reset(time: int) -> void:
 	direction = generate_random_direction()
 	velocity = direction * speed
 
+
 func generate_random_direction() -> Vector2:
 	var x = randf_range(-0.75, 0.75)
 	var y = 1 if (randf() > 0.5) else -1

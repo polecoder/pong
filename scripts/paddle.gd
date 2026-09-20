@@ -10,6 +10,7 @@ var is_enemy = false
 func _ready():
 	if self.has_node("EnemyComponent"): is_enemy = true
 
+
 func calculate_ball_bounce(ball_collision_position: Vector2) -> Vector2:
 	var distance = global_position.x - ball_collision_position.x
 	var angle_factor = distance / (paddle_length / 2)

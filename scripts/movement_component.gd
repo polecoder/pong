@@ -7,6 +7,7 @@ extends Node2D
 func _ready() -> void:
 	assert(body is CharacterBody2D, "MovementComponent must be a child of a CharacterBody2D!")
 
+
 func handle_movement(direction: Vector2, delta: float) -> void:
 	body.velocity = direction.normalized() * speed * delta
 	body.move_and_slide()

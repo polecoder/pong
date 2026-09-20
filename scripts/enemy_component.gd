@@ -8,6 +8,7 @@ extends Node2D
 func _ready() -> void:
 	assert(ball != null, "Ball not found in main scene! This breaks the enemy script.")
 
+
 func _physics_process(delta: float) -> void:
 	# if the enemy is to the left of the ball, then move to the right and viceversa
 	if body.position.x < ball.position.x - dead_zone_offset:

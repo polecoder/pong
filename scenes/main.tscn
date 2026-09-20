@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c6e4xwbst6i6x" path="res://scenes/paddle.tscn" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://2ysuwwnb0d23" path="res://components/player_component.tscn" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://d3s00dejubyxq" path="res://components/enemy_component.tscn" id="3_sugp2"]
+[ext_resource type="PackedScene" uid="uid://divxcqpmcim38" path="res://scenes/hud.tscn" id="7_o6xl0"]
 [ext_resource type="Script" uid="uid://5fkrfkkjpov4" path="res://scripts/goal.gd" id="7_tipki"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0vi6b"]
@@ -48,6 +49,7 @@ bounce_direction = Vector2(0, -1)
 [node name="TopGoal" type="Area2D" parent="." unique_id=2047883706]
 position = Vector2(240, 2)
 script = ExtResource("7_tipki")
+goal_made_by = "Enemy"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopGoal" unique_id=1581752263]
 shape = SubResource("RectangleShape2D_qdf4v")
@@ -59,3 +61,5 @@ script = ExtResource("7_tipki")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomGoal" unique_id=1430353900]
 position = Vector2(0, 716)
 shape = SubResource("RectangleShape2D_qdf4v")
+
+[node name="Hud" parent="." unique_id=1817938943 instance=ExtResource("7_o6xl0")]
